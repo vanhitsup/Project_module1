@@ -207,26 +207,122 @@ html{
 }
 
 /* main */
-.column-layout {
-    margin-top: 36px;
-    padding: 12px 0;
-    background-color: #fff;
+.product-layout {
+    margin: 36px 10px 0 10px;
     display: flex;
+    justify-content: space-around;
+    
 }
 
-.column-item {
-    padding: 0 16px;
+/* PC, Tablet */
+@media (min-width: 740px) {
+    .product-layout {
+    }
 }
 
-.product-img {
-    flex: 1.5;
+
+.item1{
+    flex-basis: 25%;
+}
+.item2{
+    flex-basis: 55%;
 }
 
-.product-suggest {
-    flex: 1;
+.product-img{
+    display: block;
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
 }
-.main-product {
-    flex: 3;
+.product-name{
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.product-item-choice{
+    padding: 5px;
+    display: inline;
+    background-color: #37475a;
+    font-size: 12px;
+    color: white;
+}
+.product-item-choice>span{
+    color: orange;
+}
+.product-price{
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.product-detail{
+    font-weight: 700;
+    margin-top: 15px;
+}
+.product-detail>span{
+    font-size: 14px;
+    font-weight: 200;
+    color: gray;
+}
+.product-item {
+    padding: 12px 16px;
+    margin-top: 16px;
+}
+.product-price>span{
+    color: gray;
+    font-size: 14px;
+
+}
+.item3{
+    flex-basis: 18%;
+    border: 0.5px solid rgba(128, 128, 128, 0.616);
+    border-radius: 8px;
+
+}
+.item3>p{
+    margin-top: 10px;
+}
+.product-deli{
+    font-size: 12px;
+    color:rgba(0, 0, 255, 0.562);
+}
+.product-deli:hover{
+    color: rgba(255, 0, 0, 0.432);
+    cursor: pointer;
+}
+#qty{
+    width: 30px;
+}
+.add-card-btn{
+    margin-top: 15px;
+    height: 35px;
+    width: 200px;
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    background-color: #ffd814;
+}
+.add-card-btn:hover{
+    background-color: #f7ca00;
+    cursor: pointer;
+
+}
+.buy-btn{
+    display: block;
+    margin-top: 15px;
+    height: 35px;
+    width: 200px;
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    background-color: #ffa41c;
+}
+.buy-btn:hover{
+    background-color: #e47911;
+    cursor: pointer;
+
+}
+.product-infor{
+    margin: 15px 0;
+    font-size: 18px;
 }
 /* end-main */
 
