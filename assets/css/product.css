@@ -222,7 +222,7 @@ html{
 .product-item {
     padding: 12px 0 0 0;
     margin: 16px 1px 0 10px;
-    flex-basis: 18%;
+    flex-basis: 19%;
     border: 1px solid rgba(128, 128, 128, 0.185);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     background-color: #f7f7f7;
@@ -275,7 +275,7 @@ html{
     color: rgba(0, 0, 255, 0.473);
     font-style: italic;
 }
-.btn-add{
+.btn-add-cart{
     display: block;
     width: 150px;
     height: 25px;
@@ -289,6 +289,16 @@ html{
     background-color: #f7ca00;
     cursor: pointer;
 
+}
+.quantity{
+    display: flex;
+    margin-left: 8px;
+}
+.item{
+    width: 20px;
+}
+.count{
+    margin: 0 5px;
 }
 
 /* end-main */
