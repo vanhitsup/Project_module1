@@ -209,8 +209,8 @@ html{
 /* main */
 .product-layout {
     display: flex;
-    justify-content: space-around;
-    height: 415px;
+    flex-wrap: wrap;
+    margin: 0 20px;
 }
 
 /* PC, Tablet */
@@ -221,7 +221,7 @@ html{
 
 .product-item {
     padding: 12px 0 0 0;
-    margin-top: 16px;
+    margin: 16px 1px 0 10px;
     flex-basis: 18%;
     border: 1px solid rgba(128, 128, 128, 0.185);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
@@ -275,6 +275,22 @@ html{
     color: rgba(0, 0, 255, 0.473);
     font-style: italic;
 }
+.btn-add{
+    display: block;
+    width: 150px;
+    height: 25px;
+    margin: 10px auto;
+    background-color: #ffd814;
+    outline: none;
+    border: 0;
+    border-radius: 4px;
+}
+.btn-add:hover{
+    background-color: #f7ca00;
+    cursor: pointer;
+
+}
+
 /* end-main */
 /* Footer */
 footer{

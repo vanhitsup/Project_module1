@@ -324,6 +324,15 @@ html{
     margin: 15px 0;
     font-size: 18px;
 }
+.quantity{
+    display: flex;
+}
+.item{
+    width: 20px;
+}
+.count{
+    margin: 0 10px;
+}
 /* end-main */
 
 /* Footer */

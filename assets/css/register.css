@@ -86,3 +86,8 @@ section hr{
     width: 200px;
     margin: 20px auto;
 }
+.error{
+    font-size: 11px;
+    color: red;
+    font-style: italic;
+}

@@ -89,3 +89,8 @@ section hr{
     color: rgba(0, 0, 255, 0.527);
     margin-top: 20px;
 }
+.error{
+    font-size: 11px;
+    color: red;
+    font-style: italic;
+}
