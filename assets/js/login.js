@@ -5,7 +5,7 @@ console.log(users);
 let formLogin = document.getElementById("form");
 let userLogin = document.getElementById("username");
 let passLogin = document.getElementById("password");
-// console.log(formLogin, userLogin, passLogin);
+
 
 // Truy vấn các HTML báo lỗi
 let usernameErr = document.getElementById("userNameErr");

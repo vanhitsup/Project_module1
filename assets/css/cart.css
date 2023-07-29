@@ -370,11 +370,23 @@ main{
     width: 20px;
 }
 .item{
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .item-price{
     font-size: 18px;
     font-weight: bold;
+}
+.delete-btn{
+    display: block;
+    width: 80px;
+    background-color: #ffd814;
+    border: none;
+    height: 20px;
+    border-radius: 3px;
+}
+.delete-btn:hover{
+    background-color: #f3a847;
+    cursor: pointer;
 }
 
 /* end-main */

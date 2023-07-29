@@ -15,7 +15,7 @@
     />
    
   </head>
-  <body>
+  <body  class="body">
     <!-- Header -->
     <header>
       <div class="nav-bar">
@@ -77,10 +77,10 @@
               <p class="text2">& Orders</p>
             </div>
           </a>
-          <a href="">
+          <a href="/views/cart.html">
             <div class="cart box">
               <i class="fa-solid fa-cart-shopping cart-icon"></i>
-              <span class="cart-qty">9</span>
+              <span class="cart-qty" id="cart-qty">0</span>
               <p class="text2">Cart</p>
             </div>
           </a>
@@ -116,168 +116,11 @@
     <!-- Main  -->
     <main>       
       <h3 style="font-size: 17px;margin:5px 0 -10px 9px">Results</h3>
-      <div class="product-layout" id="product-layout">
-        <div class="product-item" id="product-item">
-          <div class="product-item-img">
-            <img src="/resource/image/product1.jpg" alt="" class="img-product">
-          </div>
-            <a href="product_detail.html" class="product-item-name">
-              Dove Men+Care Hair + Skin Care Regimen Personal Care for Men Clean Comfort + Fresh & Clean Body Wash, 2-in-1 Shampoo and Conditioner, and Antiperspirant Clinical Deodorant
-            </a>
-            <p class="product-price">Price: <span>10</span>$</p>
-            <div class="quantity ">
-              <button class="btn-minus item">-</button>
-              <div class="count">0</div>
-              <button class="btn-add item">+</button>
-             </div>
-            <p class="product-ship">Ship to Viet Nam</p>
-            <button class="btn-add-cart" id="btn-add-cart">Add To Cart</button>
-        </div>
-        <div class="product-item" id="product-item">
-          <div class="product-item-img">
-            <img src="/resource/image/product2.jpg" alt="" class="img-product">
-          </div>
-            <a href="product_detail.html" class="product-item-name">
-              Dove Men+Care Hair + Skin Care Regimen Personal Care for Men Clean Comfort + Fresh & Clean Body Wash, 2-in-1 Shampoo and Conditioner, and Antiperspirant Clinical Deodorant
-            </a>
-            <p class="product-price">Price: <span>10</span>$</p>
-            <div class="quantity ">
-              <button class="btn-minus item">-</button>
-              <div class="count">0</div>
-              <button class="btn-add item">+</button>
-             </div>
-            <p class="product-ship">Ship to Viet Nam</p>
-            <button class="btn-add-cart" id="btn-add-cart">Add To Cart</button>
-        </div>
-        <div class="product-item" id="product-item">
-          <div class="product-item-img">
-            <img src="/resource/image/product3.jpg" alt="" class="img-product">
-          </div>
-            <a href="product_detail.html" class="product-item-name">
-              Dove Men+Care Hair + Skin Care Regimen Personal Care for Men Clean Comfort + Fresh & Clean Body Wash, 2-in-1 Shampoo and Conditioner, and Antiperspirant Clinical Deodorant
-            </a>
-            <p class="product-price">Price: <span>10</span>$</p>
-            <div class="quantity ">
-              <button class="btn-minus item">-</button>
-              <div class="count">0</div>
-              <button class="btn-add item">+</button>
-             </div>
-            <p class="product-ship">Ship to Viet Nam</p>
-            <button class="btn-add-cart" id="btn-add-cart">Add To Cart</button>
-        </div>
-        <div class="product-item" id="product-item">
-          <div class="product-item-img">
-            <img src="/resource/image/product4.jpg" alt="" class="img-product">
-          </div>
-            <a href="product_detail.html" class="product-item-name">
-              Dove Men+Care Hair + Skin Care Regimen Personal Care for Men Clean Comfort + Fresh & Clean Body Wash, 2-in-1 Shampoo and Conditioner, and Antiperspirant Clinical Deodorant
-            </a>
-            <p class="product-price">Price: <span>10</span>$</p>
-            <div class="quantity ">
-              <button class="btn-minus item">-</button>
-              <div class="count">0</div>
-              <button class="btn-add item">+</button>
-             </div>
-            <p class="product-ship">Ship to Viet Nam</p>
-            <button class="btn-add-cart" id="btn-add-cart">Add To Cart</button>
-        </div>
-        <div class="product-item" id="product-item">
-          <div class="product-item-img">
-            <img src="/resource/image/product11.jpg" alt="" class="img-product">
-          </div>
-            <a href="product_detail.html" class="product-item-name">
-              Dove Men+Care Hair + Skin Care Regimen Personal Care for Men Clean Comfort + Fresh & Clean Body Wash, 2-in-1 Shampoo and Conditioner, and Antiperspirant Clinical Deodorant
-            </a>
-            <p class="product-price">Price: <span>10</span>$</p>
-            <div class="quantity ">
-              <button class="btn-minus item">-</button>
-              <div class="count">0</div>
-              <button class="btn-add item">+</button>
-             </div>
-            <p class="product-ship">Ship to Viet Nam</p>
-            <button class="btn-add-cart" id="btn-add-cart">Add To Cart</button>
-        </div>
-        <div class="product-item" id="product-item">
-          <div class="product-item-img">
-            <img src="/resource/image/product14.jpg" alt="" class="img-product">
-          </div>
-            <a href="product_detail.html" class="product-item-name">
-              Dove Men+Care Hair + Skin Care Regimen Personal Care for Men Clean Comfort + Fresh & Clean Body Wash, 2-in-1 Shampoo and Conditioner, and Antiperspirant Clinical Deodorant
-            </a>
-            <p class="product-price">Price: <span>10</span>$</p>
-            <div class="quantity ">
-              <button class="btn-minus item">-</button>
-              <div class="count">0</div>
-              <button class="btn-add item">+</button>
-             </div>
-            <p class="product-ship">Ship to Viet Nam</p>
-            <button class="btn-add-cart" id="btn-add-cart">Add To Cart</button>
-        </div>
-        <div class="product-item" id="product-item">
-          <div class="product-item-img">
-            <img src="/resource/image/product1.jpg" alt="" class="img-product">
-          </div>
-            <a href="product_detail.html" class="product-item-name">
-              Dove Men+Care Hair + Skin Care Regimen Personal Care for Men Clean Comfort + Fresh & Clean Body Wash, 2-in-1 Shampoo and Conditioner, and Antiperspirant Clinical Deodorant
-            </a>
-            <p class="product-price">Price: <span>10</span>$</p>
-            <div class="quantity ">
-              <button class="btn-minus item">-</button>
-              <div class="count">0</div>
-              <button class="btn-add item">+</button>
-             </div>
-            <p class="product-ship">Ship to Viet Nam</p>
-            <button class="btn-add-cart" id="btn-add-cart">Add To Cart</button>
-        </div>
-        <div class="product-item" id="product-item">
-          <div class="product-item-img">
-            <img src="/resource/image/product2.jpg" alt="" class="img-product">
-          </div>
-            <a href="product_detail.html" class="product-item-name">
-              Dove Men+Care Hair + Skin Care Regimen Personal Care for Men Clean Comfort + Fresh & Clean Body Wash, 2-in-1 Shampoo and Conditioner, and Antiperspirant Clinical Deodorant
-            </a>
-            <p class="product-price">Price: <span>10</span>$</p>
-            <div class="quantity ">
-              <button class="btn-minus item">-</button>
-              <div class="count">0</div>
-              <button class="btn-add item">+</button>
-             </div>
-            <p class="product-ship">Ship to Viet Nam</p>
-            <button class="btn-add-cart" id="btn-add-cart">Add To Cart</button>
-        </div>
-        <div class="product-item" id="product-item">
-          <div class="product-item-img">
-            <img src="/resource/image/product4.jpg" alt="" class="img-product">
-          </div>
-            <a href="product_detail.html" class="product-item-name">
-              Dove Men+Care Hair + Skin Care Regimen Personal Care for Men Clean Comfort + Fresh & Clean Body Wash, 2-in-1 Shampoo and Conditioner, and Antiperspirant Clinical Deodorant
-            </a>
-            <p class="product-price">Price: <span>10</span>$</p>
-            <div class="quantity ">
-              <button class="btn-minus item">-</button>
-              <div class="count">0</div>
-              <button class="btn-add item">+</button>
-             </div>
-            <p class="product-ship">Ship to Viet Nam</p>
-            <button class="btn-add-cart" id="btn-add-cart">Add To Cart</button>
-        </div>
-        <div class="product-item" id="product-item">
-          <div class="product-item-img">
-            <img src="/resource/image/product3.jpg" alt="" class="img-product">
-          </div>
-            <a href="product_detail.html" class="product-item-name">
-              Dove Men+Care Hair + Skin Care Regimen Personal Care for Men Clean Comfort + Fresh & Clean Body Wash, 2-in-1 Shampoo and Conditioner, and Antiperspirant Clinical Deodorant
-            </a>
-            <p class="product-price">Price: <span>10</span>$</p>
-            <div class="quantity ">
-              <button class="btn-minus item">-</button>
-              <div class="count">0</div>
-              <button class="btn-add item">+</button>
-             </div>
-            <p class="product-ship">Ship to Viet Nam</p>
-            <button class="btn-add-cart" id="btn-add-cart">Add To Cart</button>
-        </div>
-    </div>
+        <div id="list" class="list">
+      
+       
+      </div>
+    
     </main>
     <!-- End Main -->
     <footer>
@@ -341,6 +184,6 @@
       </div>
     </footer>
    <script src="assets/js/app.js"></script>
-    <!-- <script src="../assets/js/cart.js"></script> -->
+    <script src="/assets/js/cart.js"></script>
   </body>
 </html>

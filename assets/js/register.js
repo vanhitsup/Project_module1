@@ -10,7 +10,6 @@ let usernameError = document.getElementById("userNameErr");
 let emailError = document.getElementById("emailErr");
 let passwordError = document.getElementById("passErr");
 let passwordRepeatError = document.getElementById("rePassErr");
-console.log(usernameError, emailError, passwordError, passwordRepeatError);
 // Hàm xóa lỗi
 function deleteError() {
   usernameError.innerText = "";
