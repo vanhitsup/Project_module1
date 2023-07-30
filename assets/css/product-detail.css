@@ -167,12 +167,13 @@ html{
     font-size: 25px;
     padding-right: 5px;
 }
+
 .cart .cart-qty{
     position: absolute;
     top:0;
-    right: 79px;
-    color: white;
-    font-size: 14px;
+    right: 75px;
+    color: red;
+    font-size: 13px;
 }
 /* end nav */
 

@@ -38,18 +38,26 @@ let products = [
   {
     id: 5,
     name: "PRODUCT NAME 5",
-    image: "5.PNG",
+    image: "product2.jpg",
     price: 320000,
   },
   {
     id: 6,
     name: "PRODUCT NAME 6",
-    image: "6.PNG",
+    image: "product2.jpg",
     price: 120000,
   },
 ];
 
 let list = document.getElementById("list");
+let cart=JSON.parse(localStorage.getItem("carts")) ||[];
+
+
+// Viêt hàm render dữ liệu cart ra bên giỏ hàng
+
+
+
+
 
 // Khởi tạo hàm render - hàm để in dữ liệu sản phẩm
 function render() {
@@ -83,9 +91,10 @@ function render() {
 // Gọi hàm render để in dữ liệu sản phẩm
 render();
 
+
+
 //Xử lý giỏ hàng - lấy dữ liệu trên local
 
-let cart=JSON.parse(localStorage.getItem("carts")) ||[];
 
 list.onclick=function(e){
   if(e.target.classList.contains("btn-add")){
@@ -104,7 +113,7 @@ list.onclick=function(e){
     else{
       cart[findIndex].count+=1;
     }
-    console.log("hi",cart);
+    console.log("Sau khi thêm cart",cart);
     //thêm dữ liệu cart lên local
     localStorage.setItem("carts",JSON.stringify(cart));
     //in số lượng sp trong giỏ
@@ -114,9 +123,7 @@ list.onclick=function(e){
     // renderCart();
     // renderTotal();
   }
-  }
-  let listCard = document.getElementById("list-cart");
-  console.log(listCard);
+  };
 
 
   //Tổng tiền
@@ -133,3 +140,4 @@ list.onclick=function(e){
   //   });
   //   subtotal.innerText=formatter;
   // }
+  

@@ -1,35 +1,41 @@
 
 let cart=JSON.parse(localStorage.getItem("carts")) ||[];
+console.log(cart);
 
-console.log("Ngoài sự kiện", cart);
-// Viết hàm render dữ liệu trong cart ra bên giỏ hàng
-let listCard = document.getElementsByClassName("list-cart");
-console.log(listCard);
+let listcart = document.getElementById("list-cart");
+if(cart== [] || cart ==0 ){
+  let newli=document.createElement("li");
+  newli.innerHTML= `
+  <div class="cart-empty">
+        <h2>Your Amazon Cart is empty.</h2>
+  </div>
+  `;
+  listcart.appendChild(newli);
 
-    cart.forEach((e) => {
-      // Bước 1: Tạo mới thẻ li
-      let newdiv = document.createElement("div");
-      newdiv.classList.add("product-img-cart");
+}
+else{
 
-      // Bước 2: Gán nội dung cho thẻ li vừa tạo mới
-      newdiv.innerHTML = `
-      <img src="../resource/image/${e.image}" />
-    </div>
-    <div class="product-detail-cart">
-        <p class="product-detail-cart-name item"> 
-        ${e.name}
-        </p>           
-         <p class="item">
-          Price: <span class="item-price">${e.price}</span> $
-         </p>               
-         <div class="quantity item">
-          <button class="btn-minus">-</button>
-          <div class="count">${e.count}</div>
-          <button class="btn-add">+</button>
-         </div>  
-         <button class="delete-btn">Delete</button>       
-      `;
-      //Bước 3: Thêm li vào trong thẻ cha ul
-      listCard.appendChild(div);
-    });
   
+cart.forEach((e)=>{
+  let li=document.createElement("li");
+  li.innerHTML=`
+  <div class="product-img">
+  <img src="/resource/image/${e.image}" alt="">
+</div>
+<div class="product-detail">
+  <div class="product-name">${e.name}
+    </div>
+  <div class="produc-price">${e.price} $</div>
+  <div class="btn">
+    <button class="btn-minus" id=${e.id}>-</button>
+    <div class="count">${e.count}</div>
+    <button class="btn-add" id=${e.id}>+</button>
+  </div>
+  <button class="btn-delete" id=${e.id}>Delete</button>
+</div>
+  `;
+
+  listcart.appendChild(li);
+});
+
+}
