@@ -70,6 +70,7 @@ html{
     background-color: #dadada;
     display: block;
 }
+
 .nav__search-select:hover{
     background-color: #bbbfbf;
     cursor: pointer;

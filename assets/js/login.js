@@ -40,6 +40,7 @@ formLogin.onsubmit = function login(e) {
       deleteErr();
       // Nếu đăng nhập thành công thì mọi người chuyển sang trang chủ
         alert("Đăng nhập thành công");
+     
       window.location.href = "/index.html";
     }
   }

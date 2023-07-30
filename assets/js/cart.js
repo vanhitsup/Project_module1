@@ -109,9 +109,21 @@ list.onclick=function(e){
     if(findIndex==-1){
       buyItem.count=1;
       cart.push(buyItem);
+      // alert("Add to cart successfully !!!");
+      Swal.fire(
+        'Add to cart successfully !!!',
+        '',
+        'success'
+      )
     }
     else{
       cart[findIndex].count+=1;
+      Swal.fire(
+        'Add to cart successfully !!!',
+        '',
+        'success'
+      )
+
     }
     console.log("Sau khi thêm cart",cart);
     //thêm dữ liệu cart lên local
@@ -120,24 +132,11 @@ list.onclick=function(e){
     let qty=document.getElementById("cart-qty");
     qty.innerText=cart.length;
     //In sp 
-    // renderCart();
+    renderCart();
     // renderTotal();
   }
   };
 
 
-  //Tổng tiền
-  // function renderTotal(){
-  //   let subtotal=document.getElementById("subtotal");
-  //   let sum=0;
-  //   for(let i=0; i<cart.length; i++){
-  //     sum+=cart[i].count*cart[i].price;
-  //   }
 
-  //   const formatter=sum.toLocaleString("es-US",{
-  //     style:"currency",
-  //     currency: "$",
-  //   });
-  //   subtotal.innerText=formatter;
-  // }
   

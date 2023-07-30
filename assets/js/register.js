@@ -67,6 +67,7 @@ registerForm.onsubmit = function register(e) {
           // Chuyển hướng đến trang đăng nhập sau khi đăng ký thành công
          
           alert("Đăng ký thành công");
+      
           window.location.href="login.html";
         } else {
           passwordRepeatError.innerText = "Mật khẩu không trùng khớp";
