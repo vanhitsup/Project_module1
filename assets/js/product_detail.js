@@ -1,5 +1,4 @@
 let productDetail = document.getElementById("product-detail");
-console.log(productDetail);
 // Dữ liệu
 let products = [
     {
@@ -63,7 +62,6 @@ let products = [
     },
   ];
   var url_str = location.href;
-  console.log(url_str);
   let url = new URL(url_str);
   let search_params = url.searchParams.get('id'); 
 
@@ -73,6 +71,7 @@ let productPrice;
 let productBrand;
 let productColor;
 let productTitle;
+let productId;
   for (let i = 0; i < products.length; i++) {
          productName=products[search_params-1].name; 
          productImage=products[search_params-1].image;    
@@ -80,6 +79,8 @@ let productTitle;
          productBrand=products[search_params-1].brand;  
          productColor=products[search_params-1].color;    
          productTitle=products[search_params-1].title;    
+         productId=products[search_params-1].id;    
+
   
   }
   const USDollar = new Intl.NumberFormat('en-US', {
@@ -87,9 +88,7 @@ let productTitle;
     currency: 'USD',
   });
   newPrice=USDollar.format(productPrice);
-  console.log(productName);
-  console.log(productImage);
-  console.log(productPrice);
+
 
   let newdiv = document.createElement("div");
   newdiv.setAttribute("id", "item");
@@ -111,15 +110,11 @@ let productTitle;
  <p class="product-brand product-detail">Brand: <span> ${productBrand}  </span></p>
 
  <p class="product-color product-detail">Color:    <span>${productColor}</span></p>
- <div class="quantity  product-detail">
-   <button class="btn-minus item">-</button>
-   <div class="count">1</div>
-   <button class="btn-add item">+</button>
-  </div>         
+         
  <hr style="margin-top: 20px;">
 
- <input class="add-card-btn" type="button" value="Add to Card">
- <input class="buy-btn" type="button" value="Buy Now">
+ <button id="${productId}" class="add-cart-btn btn-add">Add To Card</button>
+
  <hr style="margin-top: 20px;">
  <p class="product-infor">
    About this item
@@ -130,4 +125,45 @@ let productTitle;
   // Thêm newdiv vào thẻ cha có id là list
   productDetail.appendChild(newdiv);
       
+  let cart=JSON.parse(localStorage.getItem("carts")) ||[];
+
+  productDetail.onclick=function(e){
+    if(e.target.classList.contains("btn-add")){
+  
+      let id=Number(e.target.id);
+      let buyItem= products.find((e)=>e.id==id);
+      console.log(buyItem);
+  
+      let findIndex= cart.findIndex((e)=>buyItem.id==e.id);
+      console.log(findIndex);
+  
+      if(findIndex==-1){
+        buyItem.count=1;
+        cart.push(buyItem);
+        // alert("Add to cart successfully !!!");
+        Swal.fire(
+          'Add to cart successfully !!!',
+          '',
+          'success'
+        )
+      }
+      else{
+        cart[findIndex].count+=1;
+        Swal.fire(
+          'Add to cart successfully !!!',
+          '',
+          'success'
+        )
+  
+      }
+    }
+      console.log("Sau khi thêm cart",cart);
+      //thêm dữ liệu cart lên local
+      localStorage.setItem("carts",JSON.stringify(cart));
+      //in số lượng sp trong giỏ
+      let qty=document.getElementById("cart-qty");
+      qty.innerText=cart.length;
+  
+    }
+    
   

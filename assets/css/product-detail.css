@@ -294,7 +294,7 @@ html{
 #qty{
     width: 30px;
 }
-.add-card-btn{
+.add-cart-btn{
     margin-top: 15px;
     height: 35px;
     width: 200px;
@@ -303,7 +303,7 @@ html{
     border: 0;
     background-color: #ffd814;
 }
-.add-card-btn:hover{
+.add-cart-btn:hover{
     background-color: #f7ca00;
     cursor: pointer;
 
