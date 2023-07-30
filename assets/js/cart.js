@@ -1,13 +1,4 @@
-// let openShopping = document.querySelector(".shopping");
-// let closeShopping = document.querySelector(".closeShopping");
-// let body = document.querySelector(".body");
 
-// openShopping.addEventListener("click", () => {
-//   body.classList.add("active");
-// });
-// closeShopping.addEventListener("click", () => {
-//   body.classList.remove("active");
-// });
 
 // Dữ liệu
 let products = [
@@ -64,6 +55,8 @@ function render() {
   // Bước 1: In dữ liệu ra màn hình
   // Để duyệt qua từng phần tử có thể sử dụng hàm map() hoặc forEach()
   products.forEach((element) => {
+   
+
     // Tạo HTML element
     let newdiv = document.createElement("div");
     // Set thêm thuộc tính (attribute)
@@ -74,7 +67,7 @@ function render() {
     newdiv.classList.add("item");
     // Thêm nội dung cho thẻ div vừa tạo thông qua innerHTML
     newdiv.innerHTML = `
-    <a href="/views/product_detail.html">
+    <a href="/views/product_detail.html?id=${element.id}">
     <div class="product-img">
       <img src="../resource/image/${element.image}" />
     </div>
