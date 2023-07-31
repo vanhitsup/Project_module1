@@ -19,6 +19,7 @@ function renderCart(){
   
   cart.forEach((e)=>{
     let li=document.createElement("li");
+    
     li.innerHTML=`
     <div class="product-img">
     <img src="/resource/image/${e.image}" alt="">
