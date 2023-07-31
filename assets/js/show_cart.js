@@ -4,6 +4,7 @@ console.log(cart);
 
 let listcart = document.getElementById("list-cart");
 
+cart.reverse();
 function renderCart(){
   if(cart== [] || cart ==0 ){
     let newli=document.createElement("li");

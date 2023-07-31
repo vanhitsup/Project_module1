@@ -1,11 +1,9 @@
-// Lấy các phần tử HTML cần thiết
 let registerForm = document.getElementById("form");
 let usernameInput = document.getElementById("username");
 let emailInput = document.getElementById("email");
 let passwordInput = document.getElementById("password");
 let passwordRepeatInput = document.getElementById("re-password");
 
-// Lấy các phần tử HTML để hiển thị thông báo lỗi
 let usernameError = document.getElementById("userNameErr");
 let emailError = document.getElementById("emailErr");
 let passwordError = document.getElementById("passErr");
@@ -43,9 +41,9 @@ registerForm.onsubmit = function register(e) {
   let passwordRepeatValue = passwordRepeatInput.value;
   // console.log(usernameValue, emailValue, passwordValue, passwordRepeatValue);
   if (checkUsername(usernameValue)) {
-    usernameError.innerText = "Tên đăng nhập đã tồn tại";
+    usernameError.innerText = "Username available";
   } else if (usernameValue === "") {
-    usernameError.innerText = "Không được để trống tên người dùng";
+    usernameError.innerText = "Username cannot be left blank";
   } else {
     deleteError();
     if (isValidEmail(emailValue)) {
@@ -66,17 +64,17 @@ registerForm.onsubmit = function register(e) {
           localStorage.setItem("users", JSON.stringify(users));
           // Chuyển hướng đến trang đăng nhập sau khi đăng ký thành công
          
-          alert("Đăng ký thành công");
+          alert("Sign Up Success");
       
           window.location.href="login.html";
         } else {
-          passwordRepeatError.innerText = "Mật khẩu không trùng khớp";
+          passwordRepeatError.innerText = "Password does not match";
         }
       } else {
-        passwordError.innerText = "Mật khẩu không đúng định dạng";
+        passwordError.innerText = "Password is not in the correct format";
       }
     } else {
-      emailError.innerText = "Email không đúng";
+      emailError.innerText = "Email is not correct";
     }
   }
 };

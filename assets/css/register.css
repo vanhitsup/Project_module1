@@ -71,6 +71,11 @@ section hr{
     background-color: #ffd814;
     border: 0.3px;
 }
+.submit-btn:hover{
+    cursor: pointer;
+    background-color: #e47911;
+
+}
 .privacy{
     width: 295px;
     font-size: 12px;

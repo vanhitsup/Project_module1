@@ -27,19 +27,19 @@ formLogin.onsubmit = function login(e) {
   let user = users.find((user) => user.userName === userLoginValue);
 
   if (userLoginValue == "") {
-    usernameErr.innerText = "Username không được bỏ trống";
+    usernameErr.innerText = "Username not be empty";
   } else if (!user) {
     deleteErr();
-    usernameErr.innerText = "Username không tồn tại";
+    usernameErr.innerText = "Username does not exist";
   } else {
     deleteErr();
     if (passLoginValue !== user.password) {
       deleteErr();
-      passErr.innerText = "Mật khẩu không đúng";
+      passErr.innerText = "Incorrect password";
     } else {
       deleteErr();
       // Nếu đăng nhập thành công thì mọi người chuyển sang trang chủ
-        alert("Đăng nhập thành công");
+        alert("Logged in successfully");
      
       window.location.href = "/index.html";
     }
